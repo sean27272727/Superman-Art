@@ -164,6 +164,31 @@ public class SimpleGraphics extends Application {
     }
 
     /**
+     * AI Attribution: Generated with Gemini.
+     * Prompt: "a function fillParallelogram(double x, double y, double sideWidth, double height) that draws and fills a new parallelogram, so that x and y coordinate is the top right corner of the parallelogram, and sideWidth is the width of one side, not the whole shape"
+     */
+    public static void fillParallelogram(double x, double y, double sideWidth, double height) {
+        // Slant ratio determines the horizontal shift from top to bottom
+        double slant = sideWidth * 0.5;
+
+        double[] xPoints = {
+            x,                 // top-right corner
+            x - sideWidth,     // top-left corner
+            x - sideWidth - slant, // bottom-left corner
+            x - slant          // bottom-right corner
+        };
+
+        double[] yPoints = {
+            y,                 // top-right corner
+            y,                 // top-left corner
+            y + height,        // bottom-left corner
+            y + height         // bottom-right corner
+        };
+
+        gc.fillPolygon(xPoints, yPoints, 4);
+    }
+
+    /**
      * Draws a curve that connects a list of points, in order. Points are given as a
      * list of double[]{x, y} pairs, e.g.:
      *   List.of(new double[]{100, 150}, new double[]{300, 200}, new double[]{200, 350})

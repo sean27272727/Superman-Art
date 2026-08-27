@@ -20,6 +20,10 @@ public class MyPicture {
         SimpleGraphics.setFillColor("#f1c27d");
         SimpleGraphics.fillCircle(250, 30, 30);
 
+        // Draw Cape
+        SimpleGraphics.setFillColor("red");
+        SimpleGraphics.fillParallelogram(325, 60, 150, 150);
+
         // Draw Body
         SimpleGraphics.setFillColor("blue");
         SimpleGraphics.fillRectangle(175, 60, 150, 150);
