@@ -1,3 +1,7 @@
+# Superman
+
+![Final Picture](<Screenshot 2026-08-27 at 08.52.00.png>)
+
 # SimpleGraphics (Java / JavaFX)
 
 Starter code for creating a static image with JavaFX's Canvas — the Java version of the tessellation
