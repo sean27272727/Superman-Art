@@ -1,5 +1,9 @@
 package org.example;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -7,10 +11,6 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * SimpleGraphics
@@ -129,6 +129,38 @@ public class SimpleGraphics extends Application {
     /** Draws an outlined rectangle given its top-left corner, width, and height. */
     public static void drawRectangle(double x, double y, double width, double height) {
         gc.strokeRect(x, y, width, height);
+    }
+
+    /**
+     * AI Attribution: Generated with Gemini.
+     * Prompt: "a function superEmblem(double x, double y, double width, double length, String shapeColor, String sColor) that draws superman's trademark diamond shape with a S in the middle"
+     */
+    public static void superEmblem(double x, double y, double width, double length, String shapeColor, String sColor) {
+        // Draw shield base (pentagon/diamond shape)
+        double[] xPoints = {
+            x - width / 4.0,       // top-left
+            x + width / 4.0,       // top-right
+            x + width / 2.0,       // right shoulder
+            x,                     // bottom tip
+            x - width / 2.0        // left shoulder
+        };
+        double[] yPoints = {
+            y - length / 2.0,                // top-left
+            y - length / 2.0,                // top-right
+            y - length / 6.0,                // right shoulder
+            y + length / 2.0,                // bottom tip
+            y - length / 6.0                 // left shoulder
+        };
+
+        gc.setFill(toColor(shapeColor));
+        gc.fillPolygon(xPoints, yPoints, 5);
+
+        // Draw the "S" text centered in the shield
+        gc.setFill(toColor(sColor));
+        gc.setFont(javafx.scene.text.Font.font("Arial", javafx.scene.text.FontWeight.BOLD, length * 0.65));
+        gc.setTextAlign(javafx.scene.text.TextAlignment.CENTER);
+        gc.setTextBaseline(javafx.geometry.VPos.CENTER);
+        gc.fillText("S", x, y);
     }
 
     /**

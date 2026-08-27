@@ -24,6 +24,9 @@ public class MyPicture {
         SimpleGraphics.setFillColor("blue");
         SimpleGraphics.fillRectangle(175, 60, 150, 150);
 
+        // Draw Superman emblem
+        SimpleGraphics.superEmblem(250, 120, 100, 75, "#FFFF00", "#FF0000");
+
         // Draw Legs
         SimpleGraphics.setFillColor("blue");
         SimpleGraphics.fillRectangle(175, 210, 50, 100); 
