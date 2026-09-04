@@ -1,8 +1,5 @@
 # Superman
-Updated with new cape and pants:
-![Superman with flowing cape](image.png)
 
-Sehwan's original
 ![Final Picture](<Screenshot 2026-08-27 at 08.52.00.png>)
 
 # SimpleGraphics (Java / JavaFX)
