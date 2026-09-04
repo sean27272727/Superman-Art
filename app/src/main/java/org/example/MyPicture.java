@@ -20,10 +20,18 @@ public class MyPicture {
         SimpleGraphics.setFillColor("#f1c27d");
         SimpleGraphics.fillCircle(250, 30, 30);
 
+        // Draw eyes
+        SimpleGraphics.setFillColor("black");
+        SimpleGraphics.fillCircle(240, 20, 5);
+        SimpleGraphics.fillCircle(260, 20, 5);
+
         // Draw Cape
         SimpleGraphics.setFillColor("red");
         //SimpleGraphics.fillParallelogram(325, 60, 150, 150);
         //SimpleGraphics.setOutlineColor("white");
+        /*
+        *Code for generating flowing cape written by Mr.Reidak
+        */
         SimpleGraphics.setLineThickness(1);
         SimpleGraphics.flowingCape(175, 60, 150, 150, 1.2, 4, "#CB0000");
 
