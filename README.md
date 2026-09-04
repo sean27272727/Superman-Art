@@ -1,4 +1,7 @@
 # Superman
+Final version with eyes:
+![Final Superman](<Screenshot 2026-09-05 at 04.46.56.png>)
+
 Updated with new cape and pants:
 ![Superman with flowing cape](image.png)
 
