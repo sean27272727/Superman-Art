@@ -22,7 +22,10 @@ public class MyPicture {
 
         // Draw Cape
         SimpleGraphics.setFillColor("red");
-        SimpleGraphics.fillParallelogram(325, 60, 150, 150);
+        //SimpleGraphics.fillParallelogram(325, 60, 150, 150);
+        //SimpleGraphics.setOutlineColor("white");
+        SimpleGraphics.setLineThickness(1);
+        SimpleGraphics.flowingCape(175, 60, 150, 150, 1.2, 4, "#CB0000");
 
         // Draw Body
         SimpleGraphics.setFillColor("blue");
@@ -37,7 +40,7 @@ public class MyPicture {
         SimpleGraphics.fillRectangle(275, 210, 50, 100);
 
         // Draw Pants
-        SimpleGraphics.setFillColor("red");
+        SimpleGraphics.setFillColor("#CB0000");
         SimpleGraphics.fillTriangle(175, 210, 325, 210, 250, 240);
 
         // Draw a red sun
